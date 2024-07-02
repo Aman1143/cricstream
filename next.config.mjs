@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
-module.exports = {
+export default {
 	experimental: {
 	  runtime: 'edge',
 	},
