@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+  }
+  
+  .logo {
+	height: 6em;
+	padding: 1.5em;
+	will-change: filter;
+	transition: filter 300ms;
+  }
+  .logo:hover {
+	filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.react:hover {
+	filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  
+  @keyframes logo-spin {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+	a:nth-of-type(2) .logo {
+	  animation: logo-spin infinite 20s linear;
+	}
+  }
+  
+  .card {
+	padding: 2em;
+  }
+  
+  .read-the-docs {
+	color: #888;
+  }
+   
+  
+ 
+
+.search_input {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;
+}
+
+ 
+
+/* Feed Component */
+.feed {
+  @apply mt-16 mx-auto w-full  flex justify-center items-center flex-col gap-2;
+}
+
+ 
+ 
+
+.form_input {
+  @apply w-full flex rounded-lg   p-3 text-sm text-gray-500 outline-0;
+}
+
+ 
+ 
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.input{
+  @apply outline-none bg-gray-300 rounded-lg p-4 flex-1;
+}
+.form_div{
+  @apply w-full align-middle justify-center m-1;
+}
+
+.custom_class{
+  @apply w-2/3 h-full
+}
