@@ -1,14 +1,14 @@
+export const runtime = 'edge';
 import busboy from "busboy";
 import fs from 'fs';
 import { NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 import path from "path";
-export const runtime = 'edge';
 
  
 
 
-export const POST = async (req: NextRequest, { params }: { params: { id: string } }) => {
+export const POST = async (req: Request, { params }: { params: { id: string } }) => {
 
 	let title: string | undefined = params.id as string;
 	const headers: Record<string, string> = {};
@@ -60,7 +60,7 @@ export const POST = async (req: NextRequest, { params }: { params: { id: string 
 
 
 
-const CHUNK_SIZE_IN_BYTES = 1000000; // 1 mb
+const CHUNK_SIZE_IN_BYTES = 1000000;  
 
 export const GET = async (req: NextRequest, { params }: { params: { id: string } }, res: NextApiResponse) => {
 	try {
