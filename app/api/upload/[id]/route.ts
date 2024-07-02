@@ -3,12 +3,12 @@ import fs from 'fs';
 import { NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 import path from "path";
+export const runtime = 'edge';
 
 export const config = {
 	api: {
 		bodyParser: false,
-	},
-	runtime: 'edge',
+	}, 
 };
 
 
