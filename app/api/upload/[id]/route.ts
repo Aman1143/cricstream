@@ -17,7 +17,7 @@ export const POST = async (req: Request, { params }: { params: { id: string } })
 	})
 
 	const busboyInstance = busboy({ headers })
-	const stream = new WritableStream({
+	const stram = new WritableStream({
 		write(chunk) {
 			busboyInstance.write(chunk);
 		},
@@ -28,7 +28,7 @@ export const POST = async (req: Request, { params }: { params: { id: string } })
 			busboyInstance.destroy(err);
 		}
 	});
-	req.body?.pipeTo(stream);
+	req.body?.pipeTo(stram);
 
 
 
